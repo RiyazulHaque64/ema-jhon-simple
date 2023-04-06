@@ -1,16 +1,16 @@
 import React from 'react';
-import './Header.css';
 import logo from '../../images/Logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <nav className='header'>
+        <nav className='h-20 bg-slate-800 flex justify-between items-center px-16'>
             <img src={logo} alt="logo" />
             <div>
-                <a href="/order">Order</a>
-                <a href="/order-review">Order Review</a>
-                <a href="/manage-inventory">Manage Inventory</a>
-                <a href="/login">Login</a>
+                <Link className='text-white text-lg pr-8 duration-200 hover:text-orange-400' to="/">Shop</Link>
+                <Link className='text-white text-lg pr-8 duration-200 hover:text-orange-400' to="/orders">Orders</Link>
+                <Link className='text-white text-lg pr-8 duration-200 hover:text-orange-400' to="/inventory">Inventory</Link>
+                <Link className='text-white text-lg pr-8 duration-200 hover:text-orange-400' to="/login">Login</Link>
             </div>
         </nav>
     );
